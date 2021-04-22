@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+#ignore
+tf_flowers_tutorial.ipynb
+
 # Distribution / packaging
 .Python
 build/
