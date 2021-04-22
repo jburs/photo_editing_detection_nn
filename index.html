@@ -5,25 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
+  <title>photo edditing detection nn</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/js/app.js"></script>
+
 </head>
 
 <body>
 
-  <p>Upload image for analysis.</p>
-  <!-- upload image here-->
+    <header class=" text-center">
+        <h1 class="display-4">Bootstrap image upload</h1>
+    </header>
+
+    <!--  input box  -->
+    <input type='file' accept ="image/jpeg, image/png" name="image" id="file" onchange="readURL(this)"/>
+    <p><label fir="file" syyle="cursor: pointer;">Upload Image</label></p>
+
+    <!--  Image Display  -->
+    <img  id="blah" src="#" alt="your image" />
 
 
-  <!-- image pre-processing -->
-
-
-  <!-- run image through nn predict -->
-
-
-  <!-- output result with accuracy -->
-
-
+	<script src="static/js/app.js"></script>
 </body>
 
 </html>
