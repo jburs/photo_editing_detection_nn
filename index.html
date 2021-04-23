@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="static/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 
 </head>
 
@@ -20,8 +20,11 @@
     </header>
 
     <!--  input box  -->
+    <p><label fir="file" syyle="cursor: pointer;">Upload Image, then click predict</label></p>
     <input type='file' accept ="image/jpeg, image/png" name="image" id="file" onchange="readURL(this)"/>
-    <p><label fir="file" syyle="cursor: pointer;">Upload Image</label></p>
+    <button onclick="predict(model)">Predict</button>
+
+
 
     <!--  Image Display  -->
     <img  id="blah" src="#" alt="your image" />
