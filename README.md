@@ -21,4 +21,5 @@ Converting python tf h5 file to json for javascript how to:
  - go to command prompt  
  - cd Documents\Data_analytics\projects\photo_editing_detection_nn
  - tensorflowjs_converter --input_format=keras model_tf\model.h5 model_tf
+ - (convert to graph model) tensorflowjs_converter --input_format keras --output_format=tfjs_graph_model model_tf/model.h5 model_tf
 
