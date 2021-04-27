@@ -27,8 +27,8 @@ async function load() {
 
 function predict(model) {
     // code to connect to the <input> given value will fo here (just not yet)
-    const inputTensor = tf.tensor([parseInt(file)]); //then convert to tensor
-
+    // const inputTensor = tf.tensor([parseInt(file)]); //then convert to tensor
+    const inputTensor = tf.browser.fromPixels(file);
     //now lets make the prediction, we use .then bc the model is a promise
     model.then(model => {
         let result = model.predict(inputTensor);  // make predictions like in python 
