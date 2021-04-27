@@ -46,7 +46,10 @@ function predict(model) {
 function predictOld(modelOld) {
     // code to connect to the <input> given value will fo here (just not yet)
     // const inputTensor = tf.tensor([parseInt(file)]); //then convert to tensor
-    const inputTensor = tf.browser.fromPixels(file);
+    var imageData = tf.browser.fromPixels(file, 1);
+    // resize to 256x256
+    var imputTensor = tf.image.resizeBilinear(imageData, [256,256]);
+
     //now lets make the prediction, we use .then bc the model is a promise
     modelOld.then(modelOld => {
         let result = modelOld.predict(inputTensor);  // make predictions like in python 
