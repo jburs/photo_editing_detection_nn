@@ -48,7 +48,8 @@ function predictOld(modelOld) {
     // const inputTensor = tf.tensor([parseInt(file)]); //then convert to tensor
     var imageData = tf.browser.fromPixels(file, 1);
     // resize to 256x256
-    var imputTensor = tf.image.resizeBilinear(imageData, [256,256]);
+    var inputTensor = tf.image.resizeBilinear(imageData, [256,256]);
+    inputTensor = inputTensor.reshape([1, 65536]);
 
     //now lets make the prediction, we use .then bc the model is a promise
     modelOld.then(modelOld => {
