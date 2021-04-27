@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="static/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-
+  
+  <!-- JS script location-->
+  <script src="static/js/app.js"></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
 
     <!--  input box  -->
     <p><label fir="file" syyle="cursor: pointer;">Upload Image, then click predict</label></p>
-    <input type='file' accept ="image/jpeg, image/png" name="image" id="file" onchange="readURL(this)"/>
+    <input type='file' accept ="image/jpeg, image/png" name="image" id="file" onchange="readURL(this)">
     <button onclick="predict(model)">Predict</button>
     <button onclick="predict(modelOld)">Predict Old</button>
 
@@ -31,7 +33,7 @@
     <img  id="blah" src="#" alt="your image" />
 
 
-	<script src="static/js/app.js"></script>
+	
 </body>
 
 </html>

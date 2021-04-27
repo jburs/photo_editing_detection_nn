@@ -1,9 +1,9 @@
 /*  ==========================================
     SHOW UPLOADED IMAGE
 * ========================================== */
-import * as tf from '@tensorflow/tfjs';
-const img_height=256
-const img_width=256
+
+const img_height=256;
+const img_width=256;
 
 
 function readURL(input) {
@@ -16,8 +16,8 @@ function readURL(input) {
         };
 
         reader.readAsDataURL(input.files[0]);
-    }
-}
+    };
+};
 
 
 async function load() {
