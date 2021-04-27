@@ -1,6 +1,7 @@
 /*  ==========================================
     SHOW UPLOADED IMAGE
 * ========================================== */
+import * as tf from '@tensorflow/tfjs';
 const img_height=256
 const img_width=256
 
