@@ -24,6 +24,11 @@ async function load() {
     return model;
 };
 
+async function loadOld() {
+    const modelOld = await tf.loadLayersModel('model_old_tf/model.json');
+    return modelOld;
+};
+
 
 function predict(model) {
     // code to connect to the <input> given value will fo here (just not yet)
@@ -37,4 +42,18 @@ function predict(model) {
     });
 };
 
+
+function predictOld(modelOld) {
+    // code to connect to the <input> given value will fo here (just not yet)
+    // const inputTensor = tf.tensor([parseInt(file)]); //then convert to tensor
+    const inputTensor = tf.browser.fromPixels(file);
+    //now lets make the prediction, we use .then bc the model is a promise
+    modelOld.then(modelOld => {
+        let result = modelOld.predict(inputTensor);  // make predictions like in python 
+        result = result.round().dataSync()[0];    // round prediction and get value
+        alert(result ? "real" : " fake");         // creates pop-up. result==1 shows 'odd, otehrwise 'even
+    });
+};
+
 const model = load();  // load the model now to prevent any delay when the user clicks 'Predict'
+const modelOld = load(); 
